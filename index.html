@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AM productions</title>
+<meta name="description" content="Portfolio van Anne Linde: van complex digitaal vraagstuk naar concreet concept, prototype en werkend product.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alice&family=Imbue:opsz,wght@10..100,300..700&display=swap">
+<style>
+  :root{
+    --wine:#720407;
+    --wine-deep:#4A0204;
+    --blue:#6C9EBB;
+    --blue-light:#BCD3E1;
+    --cream:#F1E9D2;
+    --paper:#FCF6ED;
+    --paper-2:#F9EDD5;
+    --ink:#690B0B;
+    --frame:#EFE6D2;
+    --display:"Imbue","Didot","Bodoni 72",Georgia,serif;
+    --text:"Alice",Georgia,"Times New Roman",serif;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--text);
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%}
+  a{color:inherit}
+  :focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:4px}
+
+  .wrap{max-width:1180px;margin-inline:auto;padding-inline:clamp(16px,4vw,48px)}
+  .band{padding-block:clamp(4rem,9vw,7rem)}
+  .band--wine{
+    background:var(--wine);color:var(--cream);
+    --label:var(--blue-light);--rule:rgba(241,233,210,.22);--chip:rgba(241,233,210,.4);
+  }
+  .band--blue{
+    background:var(--blue);color:var(--wine-deep);
+    --label:var(--wine-deep);--rule:rgba(74,2,4,.24);--chip:rgba(74,2,4,.38);
+  }
+
+  .eyebrow{
+    margin:0;font-size:.78rem;line-height:1.4;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--label);
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{padding-block:clamp(3.5rem,8vw,6.5rem) clamp(4rem,8vw,6.5rem)}
+  .hero-grid{
+    display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);
+    gap:clamp(2.5rem,6vw,5.5rem);align-items:end;
+  }
+  .hero h1{
+    margin:.35em 0 .3em;
+    font-family:var(--display);font-weight:500;font-variation-settings:"opsz" 100;
+    font-size:clamp(4.2rem,13vw,10.5rem);line-height:.84;letter-spacing:-.01em;
+  }
+  .hero h1 span{display:block}
+  .tagline{
+    margin:0 0 1.6rem;
+    font-family:var(--display);font-weight:400;font-variation-settings:"opsz" 24;
+    font-size:clamp(1rem,1.9vw,1.3rem);letter-spacing:.22em;text-transform:uppercase;
+    color:var(--label);
+  }
+  .intro{margin:0;max-width:33em;font-size:clamp(1.05rem,1.5vw,1.18rem);line-height:1.6}
+
+  .index{
+    background:var(--paper-2);color:var(--ink);
+    padding:1.4rem clamp(1.1rem,2.5vw,1.7rem) .6rem;border-radius:3px;
+    box-shadow:0 24px 50px -26px rgba(0,0,0,.6);
+  }
+  .index h2{margin:0 0 .5rem;font-size:.78rem;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:var(--wine)}
+  .index ul{list-style:none;margin:0;padding:0}
+  .index a{
+    display:grid;grid-template-columns:1fr auto;column-gap:1rem;
+    padding:.8rem 0;border-top:1px solid rgba(105,11,11,.18);text-decoration:none;
+  }
+  .index .name{font-family:var(--display);font-weight:500;font-variation-settings:"opsz" 60;font-size:1.55rem;line-height:1.1}
+  .index .kind{font-size:.93rem;opacity:.8}
+  .index .arrow{grid-column:2;grid-row:1 / span 2;align-self:center;font-size:1.1rem;transition:transform .2s ease}
+  .index a:hover .arrow,.index a:focus-visible .arrow{transform:translateY(3px)}
+
+  /* ---------- Projecten ---------- */
+  .project{
+    display:grid;
+    grid-template-columns:minmax(0,5fr) minmax(0,7fr);
+    grid-template-areas:"head vis" "body vis";
+    grid-template-rows:auto 1fr;
+    column-gap:clamp(2rem,5.5vw,5.5rem);row-gap:1.8rem;
+  }
+  .project--flip{
+    grid-template-columns:minmax(0,6fr) minmax(0,5fr);
+    grid-template-areas:"vis head" "vis body";
+  }
+  .p-head{grid-area:head}
+  .p-body{grid-area:body}
+  .p-vis{grid-area:vis;align-self:center;margin:0}
+  .p-title{
+    margin:.4rem 0 .9rem;
+    font-family:var(--display);font-weight:500;font-variation-settings:"opsz" 90;
+    font-size:clamp(2.7rem,6.4vw,4.7rem);line-height:.95;letter-spacing:-.005em;text-wrap:balance;
+  }
+  .lead{margin:0;max-width:26em;font-size:clamp(1.15rem,1.8vw,1.32rem);line-height:1.45}
+
+  .facts{margin:0}
+  .facts > div{padding-block:.95rem;border-top:1px solid var(--rule)}
+  .facts > div:last-child{padding-bottom:0}
+  .facts dt{font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--label)}
+  .facts dd{margin:.3rem 0 0;max-width:36em}
+  .chips{display:flex;flex-wrap:wrap;gap:.45rem;margin:.15rem 0 0;padding:0;list-style:none}
+  .chips li{border:1px solid var(--chip);border-radius:999px;padding:.22rem .8rem;font-size:.9rem;line-height:1.4}
+
+  /* Browservenster */
+  .browser{
+    margin:0;border-radius:12px;overflow:hidden;background:var(--frame);
+    box-shadow:0 34px 60px -34px rgba(30,0,0,.75),0 0 0 1px rgba(74,2,4,.14);
+  }
+  .browser-bar{
+    display:flex;align-items:center;gap:.75rem;padding:.5rem .75rem;
+    border-bottom:1px solid rgba(105,11,11,.12);
+  }
+  .dots{display:flex;gap:6px;flex:none}
+  .dots i{width:10px;height:10px;border-radius:50%;background:#D7C9AC}
+  .url{
+    flex:1;min-width:0;margin-right:42px;padding:.18rem .6rem;border-radius:6px;
+    background:var(--paper);color:#7B5446;font-size:.76rem;text-align:center;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  }
+  .browser img{display:block;width:100%;height:auto}
+
+  /* Telefoon */
+  .phone{
+    margin:0;padding:2.6%;border-radius:17% / 8%;background:#211516;
+    box-shadow:0 34px 50px -22px rgba(20,0,0,.7);
+  }
+  .phone .screen{position:relative;aspect-ratio:390 / 844;overflow:hidden;border-radius:14% / 6.6%;background:var(--paper)}
+  .phone .screen::before{
+    content:"";position:absolute;z-index:1;top:2.3%;left:50%;transform:translateX(-50%);
+    width:30%;height:3.3%;border-radius:999px;background:#211516;
+  }
+  .phone img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}
+
+  .stage{position:relative;padding:0 9% 10% 0}
+  .stage .phone{position:absolute;right:0;bottom:0;width:27%}
+
+  /* Afdruk op papier (productfoto's) */
+  .print{
+    margin-inline:auto;max-width:480px;
+    background:var(--paper-2);color:var(--ink);
+    padding:clamp(10px,1.6vw,16px) clamp(10px,1.6vw,16px) 0;border-radius:3px;
+    box-shadow:0 34px 60px -30px rgba(0,0,0,.7);
+  }
+  .print img{display:block;width:100%;height:auto;border-radius:2px}
+  .print figcaption{padding:.75rem .15rem .85rem;font-size:.95rem;line-height:1.4}
+
+
+  /* Camperdagboek: brede opzet */
+  .wide-top{
+    display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);
+    column-gap:clamp(2rem,5.5vw,5.5rem);row-gap:1.8rem;align-items:start;
+  }
+  .facts--grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(1.5rem,3vw,2.5rem)}
+  .facts--grid > .span{grid-column:1 / -1}
+  .facts--grid > .end{padding-bottom:0}
+
+  /* Over mij */
+  .band--paper{
+    background:var(--paper);color:var(--ink);
+    --label:var(--wine);--rule:rgba(105,11,11,.2);--chip:rgba(105,11,11,.35);
+  }
+  .about{
+    display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);
+    column-gap:clamp(2rem,5.5vw,5.5rem);row-gap:1.2rem;align-items:start;
+  }
+  .about .p-title{margin-bottom:0}
+  .about .lead{max-width:30em;margin-bottom:1.8rem}
+  .proof{display:flex;flex-wrap:wrap;gap:.4rem 2rem;margin:1.6rem 0 0;padding:0;list-style:none}
+  .proof li{display:flex;align-items:baseline;gap:.5rem;font-size:.95rem}
+  .proof b{font-family:var(--display);font-weight:500;font-variation-settings:"opsz" 60;font-size:2.3rem;line-height:1;font-variant-numeric:tabular-nums}
+
+  .gallery{display:grid;gap:clamp(1rem,2.2vw,1.6rem);margin-top:clamp(2.5rem,5vw,4rem)}
+  .gallery-row{display:grid;grid-template-columns:2.94fr 1.81fr;gap:clamp(1rem,2.2vw,1.6rem)}
+  .shot{margin:0}
+  .shot > img{
+    display:block;width:100%;height:auto;border-radius:10px;
+    box-shadow:0 26px 50px -30px rgba(30,0,0,.7),0 0 0 1px rgba(74,2,4,.14);
+  }
+  .shot figcaption{margin-top:.6rem;font-size:.92rem}
+
+  /* ---------- Slot ---------- */
+  .closing{padding-block:clamp(3.5rem,7vw,5.5rem)}
+  .closing p.big{
+    margin:0;max-width:12em;
+    font-family:var(--display);font-weight:500;font-variation-settings:"opsz" 90;
+    font-size:clamp(2.4rem,7vw,5.2rem);line-height:.95;text-wrap:balance;
+  }
+  .closing-row{
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;
+    margin-top:2.2rem;padding-top:1rem;border-top:1px solid rgba(105,11,11,.2);font-size:.95rem;
+  }
+  .closing-row a{text-decoration:none}
+  .closing-row a:hover{text-decoration:underline}
+
+  /* ---------- Smal scherm ---------- */
+  @media (max-width:880px){
+    .hero-grid,.wide-top,.about{grid-template-columns:minmax(0,1fr)}
+    .project,.project--flip{
+      grid-template-columns:minmax(0,1fr);
+      grid-template-areas:"head" "vis" "body";
+      grid-template-rows:auto;
+    }
+    .p-vis{margin-block:.6rem}
+  }
+  @media (max-width:640px){
+    .facts--grid{grid-template-columns:minmax(0,1fr)}
+    .gallery-row{grid-template-columns:minmax(0,1fr)}
+    .url{margin-right:0}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .index .arrow{transition:none}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero band--wine" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Portfolio · Digitale innovatie &amp; product</p>
+      <h1><span>AM</span> productions</h1>
+      <p class="tagline">Tech × Creativity × Product</p>
+      <p class="intro">Ik werk graag aan digitale vraagstukken waarvan de oplossing nog niet vaststaat. Ik breng structuur aan, vertaal ideeën naar een scherp concept en zorg dat er iets ontstaat dat je kunt testen, gebruiken en verder ontwikkelen. In mijn werk doe ik dat binnen complexe digitale trajecten; in mijn eigen projecten gebruik ik AI en nieuwe technologie om sneller te onderzoeken, bouwen en itereren.</p>
+    </div>
+    <nav class="index" aria-label="Projecten">
+      <h2>Vier projecten</h2>
+      <ul>
+        <li><a href="#ochtendbode"><span class="name">De Ochtendbode</span><span class="kind">Persoonlijke digitale ochtendkrant</span><span class="arrow" aria-hidden="true">↓</span></a></li>
+        <li><a href="#wijnquiz"><span class="name">Live Wijnquiz</span><span class="kind">Realtime multiplayer-proeverij</span><span class="arrow" aria-hidden="true">↓</span></a></li>
+        <li><a href="#camperdagboek"><span class="name">Camperdagboek</span><span class="kind">Reis- en boekingsapp voor een gedeelde camper</span><span class="arrow" aria-hidden="true">↓</span></a></li>
+        <li><a href="#epaper"><span class="name">E-paper Spotify</span><span class="kind">Physical-digital muziekdisplay</span><span class="arrow" aria-hidden="true">↓</span></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- Over mij -->
+  <section class="band band--paper" id="over-mij" aria-labelledby="t-over">
+    <div class="wrap about">
+      <div>
+        <p class="eyebrow">Over mij</p>
+        <h2 class="p-title" id="t-over">Bedenken én realiseren</h2>
+      </div>
+      <div>
+        <p class="lead">Mijn kracht zit in de ruimte tussen idee en uitvoering. Ik ben gewend complexe digitale trajecten te organiseren, maar krijg juist energie van het moment daarvoor: begrijpen wat er écht nodig is, keuzes maken en een concept tastbaar krijgen.</p>
+        <dl class="facts facts--grid">
+          <div><dt>In mijn werk</dt><dd>Ik stuur multidisciplinaire teams, verbind business en techniek en zorg dat scope, prioriteiten en besluitvorming helder blijven tot en met de oplevering.</dd></div>
+          <div><dt>In mijn eigen projecten</dt><dd>Ik onderzoek productideeën door ze te bouwen. AI gebruik ik als versneller voor research, prototyping en development — niet als eindproduct op zich.</dd></div>
+          <div class="span end"><dt>Waar die werelden samenkomen</dt><dd>Ik zoek rollen waarin ik een kans of probleem scherp krijg, een digitale oplossing vormgeef en genoeg eigenaarschap neem om die ook echt de wereld in te krijgen.<ul class="chips" style="margin-top:.6rem"><li>Digitale innovatie</li><li>AI</li><li>Creatieve technologie</li><li>Productontwikkeling</li></ul></dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- De Ochtendbode -->
+  <section class="band band--blue" id="ochtendbode" aria-labelledby="t-ochtendbode">
+    <div class="wrap project">
+      <div class="p-head">
+        <p class="eyebrow">Ochtendkrant · elke nacht automatisch</p>
+        <h2 class="p-title" id="t-ochtendbode">De Ochtendbode</h2>
+        <p class="lead">Van versnipperde ochtendinformatie naar één product dat zichzelf iedere nacht vernieuwt.</p>
+      </div>
+      <figure class="p-vis stage">
+        <div class="browser">
+          <div class="browser-bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">De Ochtendbode · editie Utrecht</span></div>
+          <img src="beelden/ochtendbode-desktop.jpg" width="2560" height="1640" alt="De Ochtendbode op een laptop: krantenkop, weerbericht voor Utrecht en de rubriek Beurs &amp; Markt met twee artikelen.">
+        </div>
+        <div class="phone">
+          <div class="screen"><img src="beelden/ochtendbode-mobiel.jpg" width="1170" height="2532" alt="Dezelfde editie op een telefoon, met de kop en het weerblok onder elkaar."></div>
+        </div>
+      </figure>
+      <dl class="p-body facts">
+        <div><dt>Vraagstuk</dt><dd>Nieuws, markten, weer en lokale tips kwamen uit verschillende bronnen. Het probleem was niet een gebrek aan informatie, maar selectie: wat wil je ’s ochtends in één oogopslag weten?</dd></div>
+        <div><dt>Productkeuze</dt><dd>Ik ontwierp één persoonlijke digitale krant met vaste rubrieken, duidelijke prioriteit per type informatie en een eigen redactionele stijl.</dd></div>
+        <div><dt>Bouw &amp; iteratie</dt><dd>Ik bouwde een geautomatiseerde publicatieflow waarin een AI-model bronnen doorzoekt, relevantie beoordeelt, content schrijft en via GitHub Actions een nieuwe editie publiceert. Daarna schaafde ik op basis van dagelijks gebruik aan selectiecriteria, volgorde en toon.</dd></div>
+        <div><dt>Resultaat</dt><dd>Een werkend product dat zelfstandig iedere nacht een nieuwe editie maakt en dat ik daadwerkelijk als ochtendstart gebruik.<ul class="chips" style="margin-top:.6rem"><li>Productconcept</li><li>Informatiearchitectuur</li><li>AI-workflow</li><li>Automatisering</li></ul></dd></div>
+        <div><dt>Tech</dt><dd>Claude Code · Python · AI-model met webzoekfunctie · GitHub Actions</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- Live Wijnquiz -->
+  <section class="band band--wine" id="wijnquiz" aria-labelledby="t-wijnquiz">
+    <div class="wrap project project--flip">
+      <div class="p-head">
+        <p class="eyebrow">Groepsspel · live op je telefoon</p>
+        <h2 class="p-title" id="t-wijnquiz">Live Wijnquiz</h2>
+        <p class="lead">Een digitale laag die een live wijnproeverij spannender maakt zonder de tafel uit elkaar te trekken.</p>
+      </div>
+      <figure class="p-vis print">
+        <img src="beelden/wijnquiz.jpg" width="457" height="305" alt="Een glas rode wijn naast een telefoon met de Live Wijnquiz: ronde 3, uit welke regio komt deze wijn? Bordeaux, Toscane, Rioja of Napa Valley.">
+        <figcaption>Ronde 3: uit welke regio komt deze wijn?</figcaption>
+      </figure>
+      <dl class="p-body facts">
+        <div><dt>Vraagstuk</dt><dd>Iedereen op zijn eigen telefoon laten spelen is makkelijk; zorgen dat het spel de gezamenlijke ervaring versterkt is moeilijker.</dd></div>
+        <div><dt>Productkeuze</dt><dd>Een multiplayer-quiz met individuele input, gezamenlijke rondes en live tussenstanden. De telefoon is het bedieningsmiddel; de ervaring blijft aan tafel.</dd></div>
+        <div><dt>Bouw &amp; iteratie</dt><dd>Ik ontwierp de flow rond het tempo van de proeverij: antwoorden, reveal, score en door naar de volgende wijn. Realtime feedback en centrale resultaten houden de groep synchroon zonder het gesprek stil te leggen.</dd></div>
+        <div><dt>Resultaat</dt><dd>Gebruikt tijdens een echte proeverij; de digitale laag voegde competitie toe zonder de gezamenlijke ervaring over te nemen.<ul class="chips" style="margin-top:.6rem"><li>Interaction design</li><li>Game mechanics</li><li>Realtime UX</li><li>Prototype in gebruik</li></ul></dd></div>
+        <div><dt>Tech</dt><dd>AI-assisted rapid prototyping · realtime webapp</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- Camperdagboek -->
+  <section class="band band--blue" id="camperdagboek" aria-labelledby="t-camper">
+    <div class="wrap">
+      <div class="wide-top">
+        <div>
+          <p class="eyebrow">Familie-app · in gebruik</p>
+          <h2 class="p-title" id="t-camper">Camperdagboek</h2>
+          <p class="lead">Een gedeelde camper beheren én de reizen eromheen bewaren in één product.</p>
+          <ul class="proof">
+            <li><b>35</b> stops onderweg</li>
+            <li><b>93</b> nachten geboekt</li>
+          </ul>
+        </div>
+        <dl class="facts facts--grid">
+          <div><dt>Vraagstuk</dt><dd>Bij gedeeld gebruik zijn beschikbaarheid en boekingen essentieel, maar een kale agenda doet niets met de waarde van alle reizen die met dezelfde camper worden gemaakt.</dd></div>
+          <div><dt>Productkeuze</dt><dd>Ik combineerde planning, route, reisupdates, camperplekken en gedeelde uitgaven in één app. Zo ondersteunt het product zowel het praktische beheer als het gezamenlijke reisverhaal.</dd></div>
+          <div class="span"><dt>Bouw &amp; iteratie</dt><dd>Ik testte de belangrijkste flows met de daadwerkelijke gebruikers en paste het product daarop aan. Coördinaten invoeren bleek bijvoorbeeld onwerkbaar, dus verving ik dat door zoeken op plaatsnaam. Later kwamen gedeelde uitgaven en toegang met goedkeuring erbij.</dd></div>
+          <div class="end"><dt>Resultaat</dt><dd>Een product dat binnen de familie daadwerkelijk wordt gebruikt, inmiddels met 35 stops en 93 geboekte nachten.<ul class="chips" style="margin-top:.6rem"><li>Productconcept</li><li>UX-flows</li><li>Gebruikerstesten</li><li>Iteratieve ontwikkeling</li></ul></dd></div>
+          <div class="end"><dt>Tech</dt><dd>Claude Code · Supabase · Leaflet/OpenStreetMap · Netlify</dd></div>
+        </dl>
+      </div>
+
+      <div class="gallery">
+        <figure class="shot">
+          <img src="beelden/camper-route-calendar.webp" width="1200" height="634" alt="Privacyvriendelijke weergave van het Camperdagboek met routekaart, aangepaste reismarkers en familie-agenda.">
+          <figcaption>Route en familie-agenda</figcaption>
+        </figure>
+        <div class="gallery-row">
+          <figure class="shot">
+            <img src="beelden/camper-verhaal-sanitized.svg" width="1600" height="560" alt="Privacyvriendelijke mockup van het Camperdagboek met generieke reisverhalen en fictieve statistieken.">
+            <figcaption>Verhalen van onderweg</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="beelden/camper-plekken.jpg" width="1540" height="850" alt="Het tabblad Camperplekjes: zoeken rond Zwolle binnen 20 kilometer, een kaart met gevonden plekken en een lijst met afstanden.">
+            <figcaption>Camperplekjes in de buurt</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- E-paper Spotify -->
+  <section class="band band--wine" id="epaper" aria-labelledby="t-epaper">
+    <div class="wrap project">
+      <div class="p-head">
+        <p class="eyebrow">Hardware · e-paper</p>
+        <h2 class="p-title" id="t-epaper">E-paper Spotify</h2>
+        <p class="lead">Streamingmuziek zichtbaar maken zonder nóg een scherm dat om aandacht vraagt.</p>
+      </div>
+      <figure class="p-vis print">
+        <img src="beelden/epaper.jpg" width="420" height="306" alt="Een e-paper-schermpje in een licht stenen lijstje op tafel, met hoesafbeelding, titel Good Days van SZA en afspeelknoppen.">
+        <figcaption>Wat er nu speelt, zonder scherm dat om aandacht vraagt.</figcaption>
+      </figure>
+      <dl class="p-body facts">
+        <div><dt>Vraagstuk</dt><dd>Streaming maakt muziek praktisch onzichtbaar. Ik wilde de visuele aanwezigheid van een album terugbrengen, maar zonder een fel display aan de muur.</dd></div>
+        <div><dt>Productkeuze</dt><dd>Een e-paper object dat actuele trackinformatie en artwork toont. Het scherm verbruikt weinig energie, geeft geen licht en past daardoor beter in een interieur dan een traditioneel display.</dd></div>
+        <div><dt>Bouw &amp; iteratie</dt><dd>Ik koppelde ESP32, Spotify API en e-paper en werkte iteratief aan authenticatie, refresh-logica, partial refresh en informatiehiërarchie. Daarna vertaalde ik het technische prototype naar een fysiek object in een fotolijst.</dd></div>
+        <div><dt>Resultaat</dt><dd>Een werkend physical-digital prototype waarin software, hardware en vormgeving als één product samenkomen.<ul class="chips" style="margin-top:.6rem"><li>Prototyping</li><li>API-integratie</li><li>Information design</li><li>Hardware × software</li></ul></dd></div>
+        <div><dt>Tech</dt><dd>ESP32 · Spotify API · e-paper · Arduino/C++ · AI-assisted development</dd></div>
+      </dl>
+    </div>
+  </section>
+
+</main>
+
+<footer class="closing">
+  <div class="wrap">
+    <p class="big">Tech × Creativity × Product</p>
+    <div class="closing-row">
+      <span>AM productions · 2026</span>
+      <a href="#top">Terug naar boven ↑</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
