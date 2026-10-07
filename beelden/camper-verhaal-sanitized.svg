@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 560" role="img" aria-labelledby="t d">
 <title id="t">Geanonimiseerd verhalenoverzicht van Camperdagboek</title>
-<desc id="d">Generieke reisfoto-illustraties en niet-herleidbare onderschriften met fictieve statistieken.</desc>
+<desc id="d">Generieke reisfoto-illustraties en niet-herleidbare onderschriften, met de echte totalen van het Camperdagboek.</desc>
 <defs>
   <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f7efe4"/><stop offset="1" stop-color="#fff9f0"/></linearGradient>
   <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#8fc8d7"/><stop offset=".52" stop-color="#b6d7c4"/><stop offset=".53" stop-color="#d7b27d"/><stop offset="1" stop-color="#e5cf9d"/></linearGradient>
@@ -29,9 +29,9 @@
 <rect x="1132" y="322" width="410" height="145" rx="22" fill="#c55216"/>
 </g>
 <g font-family="Georgia,serif" text-anchor="middle">
-<text x="228" y="380" font-size="39" fill="#fff7ed">27</text><text x="228" y="417" font-family="Arial,sans-serif" font-size="15" letter-spacing="2" fill="#fff7ed">STOPS ONDERWEG</text>
-<text x="586" y="380" font-size="39" fill="#fff7ed">16</text><text x="586" y="417" font-family="Arial,sans-serif" font-size="15" letter-spacing="2" fill="#fff7ed">NACHTEN GEKAMPEERD</text>
-<text x="944" y="380" font-size="39" fill="#5a2a20">2.950 km</text><text x="944" y="417" font-family="Arial,sans-serif" font-size="15" letter-spacing="2" fill="#5a2a20">AFGELEGDE ROUTE</text>
-<text x="1337" y="380" font-size="39" fill="#fff7ed">Frankrijk</text><text x="1337" y="417" font-family="Arial,sans-serif" font-size="15" letter-spacing="2" fill="#fff7ed">VOLGENDE BESTEMMING</text>
+<text x="228" y="380" font-size="39" fill="#fff7ed">35</text><text x="228" y="417" font-family="Arial,sans-serif" font-size="15" letter-spacing="2" fill="#fff7ed">STOPS ONDERWEG</text>
+<text x="586" y="380" font-size="39" fill="#fff7ed">93</text><text x="586" y="417" font-family="Arial,sans-serif" font-size="15" letter-spacing="2" fill="#fff7ed">NACHTEN GEBOEKT</text>
+<text x="944" y="380" font-size="36" fill="#5a2a20">Familie-agenda</text><text x="944" y="417" font-family="Arial,sans-serif" font-size="15" letter-spacing="2" fill="#5a2a20">BOEKEN PER PERSOON</text>
+<text x="1337" y="380" font-size="39" fill="#fff7ed">Uitgaven</text><text x="1337" y="417" font-family="Arial,sans-serif" font-size="15" letter-spacing="2" fill="#fff7ed">GEDEELD EN VERREKEND</text>
 </g>
 </svg>
