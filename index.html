@@ -153,6 +153,13 @@
   .stage{position:relative;padding:0 9% 10% 0}
   .stage .phone{position:absolute;right:0;bottom:0;width:27%}
 
+  /* Twee telefoons naast elkaar */
+  .duo{display:flex;justify-content:center;align-items:flex-start;gap:clamp(.8rem,3vw,1.8rem);padding-bottom:6%}
+  .duo .phone{width:min(44%,230px)}
+  .duo .phone:last-of-type{margin-top:12%}
+  .duo .phone .screen::before{display:none}
+  .duo-wrap figcaption{margin-top:.4rem;font-size:.92rem;text-align:center}
+
   /* Afdruk op papier (productfoto's) */
   .print{
     margin-inline:auto;max-width:480px;
@@ -240,12 +247,13 @@
       <p class="intro">Ik werk graag aan digitale vraagstukken waarvan de oplossing nog niet vaststaat. Ik breng structuur aan, vertaal ideeën naar een scherp concept en zorg dat er iets ontstaat dat je kunt testen, gebruiken en verder ontwikkelen. In mijn werk doe ik dat binnen complexe digitale trajecten; in mijn eigen projecten gebruik ik AI en nieuwe technologie om sneller te onderzoeken, bouwen en itereren.</p>
     </div>
     <nav class="index" aria-label="Projecten">
-      <h2>Vier projecten</h2>
+      <h2>Vijf projecten</h2>
       <ul>
         <li><a href="#ochtendbode"><span class="name">De Ochtendbode</span><span class="kind">Persoonlijke digitale ochtendkrant</span><span class="arrow" aria-hidden="true">↓</span></a></li>
         <li><a href="#wijnquiz"><span class="name">Live Wijnquiz</span><span class="kind">Realtime multiplayer-proeverij</span><span class="arrow" aria-hidden="true">↓</span></a></li>
         <li><a href="#camperdagboek"><span class="name">Camperdagboek</span><span class="kind">Reis- en boekingsapp voor een gedeelde camper</span><span class="arrow" aria-hidden="true">↓</span></a></li>
         <li><a href="#epaper"><span class="name">E-paper Spotify</span><span class="kind">Physical-digital muziekdisplay</span><span class="arrow" aria-hidden="true">↓</span></a></li>
+        <li><a href="#mop-missie"><span class="name">MoP Missie</span><span class="kind">Gamified leeromgeving</span><span class="arrow" aria-hidden="true">↓</span></a></li>
       </ul>
     </nav>
   </div>
@@ -379,6 +387,35 @@
         <div><dt>Bouw &amp; iteratie</dt><dd>Ik koppelde ESP32, Spotify API en e-paper en werkte iteratief aan authenticatie, refresh-logica, partial refresh en informatiehiërarchie. Het draait inmiddels als fysiek e-paper-scherm; als laatste stap krijgt het een plek in een fotolijst.</dd></div>
         <div><dt>Resultaat</dt><dd>Een werkend physical-digital prototype waarin software, hardware en vormgeving als één product samenkomen.<ul class="chips" style="margin-top:.6rem"><li>Prototyping</li><li>API-integratie</li><li>Information design</li><li>Hardware × software</li></ul></dd></div>
         <div><dt>Tech</dt><dd>ESP32 · Spotify API · e-paper · Arduino/C++ · AI-assisted development</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- MoP Missie -->
+  <section class="band band--wine" id="mop-missie" aria-labelledby="t-mop">
+    <div class="wrap project project--flip">
+      <div class="p-head">
+        <p class="eyebrow">Leeroplossing · gamification</p>
+        <h2 class="p-title" id="t-mop">MoP Missie</h2>
+        <p class="lead">Een gamified leeromgeving die omvangrijke theorie toegankelijk en toepasbaar maakt.</p>
+      </div>
+      <figure class="p-vis duo-wrap">
+        <div class="duo">
+          <div class="phone">
+            <div class="screen"><img src="beelden/mop-badges.jpg" width="780" height="1688" alt="Het startscherm van MoP Missie met de voortgang van de deelnemer en een melding van behaalde badges."></div>
+          </div>
+          <div class="phone">
+            <div class="screen"><img src="beelden/mop-reactie.jpg" width="780" height="1688" alt="Een meerkeuzevraag uit de leeromgeving. Na een onjuist antwoord volgt direct uitleg, met een verwijzing naar de bronpagina en een reactie van een personage uit de casus."></div>
+          </div>
+        </div>
+        <figcaption>Voortgang en badges op het startscherm, en directe feedback met uitleg na een antwoord.</figcaption>
+      </figure>
+      <dl class="p-body facts">
+        <div><dt>Vraagstuk</dt><dd>Voor het MoP Foundation-examen moet de volledige methodiek van mop.wiki beheerst worden. De stof is omvangrijk en theoretisch, waardoor zelfstudie weinig houvast biedt.</dd></div>
+        <div><dt>Productkeuze</dt><dd>Ik vertaalde de theorie naar een doorlopende casus bij een fictieve organisatie, waarin de deelnemer de rol van portfoliomanager aanneemt. De stof is verdeeld over vijf thematische weken met korte dagopdrachten, praktijkvragen, geheugensteunen, samenvattingskaarten en een toets per week.</dd></div>
+        <div><dt>Bouw &amp; iteratie</dt><dd>Ik ontwikkelde eerst één week als prototype en testte die zelf, waarna de overige weken volgden. Daarna breidde ik de leeromgeving uit met directe feedback per antwoord, voortgangsindicatoren, badges en bij elke vraag een verwijzing naar de bronpagina.</dd></div>
+        <div><dt>Resultaat</dt><dd>Een complete leeromgeving met 27 dagopdrachten, 172 vragen en een eindtoets die het examen nabootst (50 vragen in 40 minuten). Ingezet binnen Aresz, waar gebruikers het een handige manier vonden om de stof eigen te maken.<ul class="chips" style="margin-top:.6rem"><li>Learning design</li><li>Gamification</li><li>Interactieontwerp</li><li>Iteratieve ontwikkeling</li></ul></dd></div>
+        <div><dt>Tech</dt><dd>Claude Code · HTML/JavaScript · Python-bouwscript met validatie · Netlify</dd></div>
       </dl>
     </div>
   </section>
